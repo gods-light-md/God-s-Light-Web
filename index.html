@@ -1,6 +1,276 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <div>
-        
-    </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="God's Light Solutions - Professional Electrical, CCTV, Microsoft, Database, and Data Science Services" />
+  <meta name="robots" content="index, follow" />
+  <title>God's Light Solutions | Professional Tech Services</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 </head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="God's Light Solutions Home">
+        <span class="logo-mark">TP</span>
+        <span class="logo-text">God's Light Solutions</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
+        <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+        <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="chat.html" class="nav-link" role="menuitem">Support</a></li>
+        <li role="none"><a href="login.html" class="nav-link nav-link--cta" role="menuitem">Client Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Infrastructure. Intelligence. Integration.</p>
+          <h1 class="hero-heading" id="hero-heading">
+            We build the systems <em>your business runs on</em>
+          </h1>
+          <p class="hero-body">
+            From precision electrical installations to enterprise-grade data pipelines — God's Light Solutions delivers end-to-end technology services that scale with ambition.
+          </p>
+          <div class="hero-actions">
+            <a href="request.html" class="btn btn--primary">Request a Service</a>
+            <a href="services.html" class="btn btn--ghost">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-stat-grid">
+            <div class="stat-card">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Installations Completed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Available</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">10yr</span>
+              <span class="stat-label">Industry Experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-overview" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-heading" id="services-heading">Five disciplines. One trusted partner.</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-service="electrical">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2L6 18h10l-2 12 14-16H18L18 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Electrical Installation</h3>
+            <p class="service-card__body">Residential and commercial wiring, panel upgrades, power distribution, and compliance certification.</p>
+            <a href="services.html#electrical" class="service-card__link">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card" data-service="cctv">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 2v4M16 26v4M2 16h4M26 16h4M6.34 6.34l2.83 2.83M22.83 22.83l2.83 2.83M6.34 25.66l2.83-2.83M22.83 9.17l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">CCTV Installation</h3>
+            <p class="service-card__body">IP camera systems, NVR/DVR configuration, remote monitoring, and security network design.</p>
+            <a href="services.html#cctv" class="service-card__link">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card" data-service="microsoft">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="13" height="13" stroke="currentColor" stroke-width="2"/>
+                <rect x="17" y="2" width="13" height="13" stroke="currentColor" stroke-width="2"/>
+                <rect x="2" y="17" width="13" height="13" stroke="currentColor" stroke-width="2"/>
+                <rect x="17" y="17" width="13" height="13" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Microsoft Solutions</h3>
+            <p class="service-card__body">Microsoft 365 deployment, Azure infrastructure, Teams integration, and enterprise licensing management.</p>
+            <a href="services.html#microsoft" class="service-card__link">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card" data-service="database">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="16" cy="8" rx="12" ry="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 8v8c0 2.21 5.37 4 12 4s12-1.79 12-4V8" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 16v8c0 2.21 5.37 4 12 4s12-1.79 12-4v-8" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Database Setup</h3>
+            <p class="service-card__body">Relational and NoSQL database architecture, performance tuning, migration, and disaster recovery planning.</p>
+            <a href="services.html#database" class="service-card__link">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card" data-service="datascience">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="4,24 10,14 16,18 22,8 28,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="14" r="2" fill="currentColor"/>
+                <circle cx="22" cy="8" r="2" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Data Science Services</h3>
+            <p class="service-card__body">ML model development, predictive analytics, business intelligence dashboards, and data strategy consulting.</p>
+            <a href="services.html#datascience" class="service-card__link">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-copy">
+            <h2 class="cta-heading" id="cta-heading">Have a question before you start?</h2>
+            <p class="cta-body">Our AI assistant knows our full service documentation. Ask it anything — and if it can't answer, it connects you to a real expert immediately.</p>
+          </div>
+          <a href="chat.html" class="btn btn--accent">Chat with Support</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">How It Works</p>
+          <h2 class="section-heading" id="process-heading">Simple, transparent, professional.</h2>
+        </div>
+        <ol class="process-steps" role="list">
+          <li class="process-step">
+            <span class="step-index" aria-hidden="true">01</span>
+            <div class="step-content">
+              <h3 class="step-title">Create Your Account</h3>
+              <p class="step-body">Register securely. Your data is encrypted and your access is role-controlled from day one.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index" aria-hidden="true">02</span>
+            <div class="step-content">
+              <h3 class="step-title">Submit a Service Request</h3>
+              <p class="step-body">Describe what you need. Our team reviews every request before confirming scope and pricing.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index" aria-hidden="true">03</span>
+            <div class="step-content">
+              <h3 class="step-title">Human Review Before Payment</h3>
+              <p class="step-body">No automatic charges. A team member confirms every transaction with you before any payment is processed.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index" aria-hidden="true">04</span>
+            <div class="step-content">
+              <h3 class="step-title">Delivery &amp; Support</h3>
+              <p class="step-body">We execute, you track progress in your dashboard. Post-delivery support is included in every engagement.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Why God's Light</p>
+          <h2 class="section-heading" id="trust-heading">Built on verifiable commitments.</h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <h3 class="trust-title">Zero Surprise Charges</h3>
+            <p class="trust-body">Every payment goes through a human approval step. We will never charge your account without explicit confirmation.</p>
+          </div>
+          <div class="trust-item">
+            <h3 class="trust-title">Role-Based Access</h3>
+            <p class="trust-body">Clients, staff, and admins operate in isolated permission layers. Your data is only visible to those who need it.</p>
+          </div>
+          <div class="trust-item">
+            <h3 class="trust-title">Data Privacy by Default</h3>
+            <p class="trust-body">We never sell your data. All communications are encrypted. You can request deletion of your account at any time.</p>
+          </div>
+          <div class="trust-item">
+            <h3 class="trust-title">Honest AI Support</h3>
+            <p class="trust-body">Our chatbot tells you when it does not know something — and hands you to a human instead of guessing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-mark">TP</span>
+            <span class="logo-text">God's Light Solutions</span>
+          </a>
+          <p class="footer-tagline">Infrastructure. Intelligence. Integration.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Services</h4>
+            <ul class="footer-nav-list">
+              <li><a href="services.html#electrical">Electrical Installation</a></li>
+              <li><a href="services.html#cctv">CCTV Installation</a></li>
+              <li><a href="services.html#microsoft">Microsoft Solutions</a></li>
+              <li><a href="services.html#database">Database Setup</a></li>
+              <li><a href="services.html#datascience">Data Science</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Company</h4>
+            <ul class="footer-nav-list">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="chat.html">Support Chat</a></li>
+              <li><a href="login.html">Client Portal</a></li>
+              <li><a href="request.html">Request Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Legal</h4>
+            <ul class="footer-nav-list">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="footer-year"></span> God's Light Solutions. All rights reserved.</p>
+        <p class="footer-legal">Registered and licensed technology service provider.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/index.js"></script>
+
+</body>
+</html>
