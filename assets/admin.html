@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="God's Light admin panel." />
+  <title>Admin Panel | God's Light</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body class="admin-page">
+
+  <header class="site-header admin-header" id="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="God's Light home">
+        <span class="logo-mark">GL</span>
+        <span class="logo-text">God's Light</span>
+        <span class="admin-badge">Admin</span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <button class="admin-nav-btn active" data-panel="overview">Overview</button>
+        <button class="admin-nav-btn" data-panel="requests">Requests</button>
+        <button class="admin-nav-btn" data-panel="payments">Payments</button>
+        <button class="admin-nav-btn" data-panel="users">Users</button>
+        <button class="admin-nav-btn" data-panel="escalations">Escalations</button>
+      </nav>
+      <div class="header-actions">
+        <span class="user-greeting" id="user-greeting"></span>
+        <button class="btn btn-ghost" id="logout-btn">Sign Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="container">
+
+      <div class="admin-access-denied hidden" id="access-denied">
+        <h1>Access Denied</h1>
+        <p>You do not have permission to view this page.</p>
+        <a href="../index.html" class="btn btn-primary">Return Home</a>
+      </div>
+
+      <div class="admin-content hidden" id="admin-content">
+
+        <section class="admin-panel" id="panel-overview">
+          <h1 class="admin-panel-title">Overview</h1>
+          <div class="admin-stats-grid" id="admin-stats" role="list" aria-label="Admin statistics">
+            <div class="admin-stat" role="listitem">
+              <span class="admin-stat-value" id="stat-users">—</span>
+              <span class="admin-stat-label">Registered Clients</span>
+            </div>
+            <div class="admin-stat" role="listitem">
+              <span class="admin-stat-value" id="stat-requests">—</span>
+              <span class="admin-stat-label">Total Requests</span>
+            </div>
+            <div class="admin-stat" role="listitem">
+              <span class="admin-stat-value" id="stat-pending">—</span>
+              <span class="admin-stat-label">Pending Requests</span>
+            </div>
+            <div class="admin-stat" role="listitem">
+              <span class="admin-stat-value" id="stat-payments">—</span>
+              <span class="admin-stat-label">Payment Requests</span>
+            </div>
+            <div class="admin-stat alert" role="listitem">
+              <span class="admin-stat-value" id="stat-escalations">—</span>
+              <span class="admin-stat-label">Chat Escalations</span>
+            </div>
+          </div>
+          <h2 class="admin-sub-heading">Recent Service Requests</h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table" id="recent-requests-table">
+              <thead>
+                <tr>
+                  <th scope="col">Client</th>
+                  <th scope="col">Service</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Urgency</th>
+                  <th scope="col">Submitted</th>
+                </tr>
+              </thead>
+              <tbody id="recent-requests-body">
+                <tr><td colspan="5" class="table-empty">Loading…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admin-panel hidden" id="panel-requests">
+          <h1 class="admin-panel-title">All Service Requests</h1>
+          <div class="admin-table-wrap">
+            <table class="admin-table" id="all-requests-table">
+              <thead>
+                <tr>
+                  <th scope="col">Client</th>
+                  <th scope="col">Service</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Urgency</th>
+                  <th scope="col">Submitted</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="all-requests-body">
+                <tr><td colspan="6" class="table-empty">Loading…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admin-panel hidden" id="panel-payments">
+          <h1 class="admin-panel-title">Payment Requests</h1>
+          <div class="admin-table-wrap">
+            <table class="admin-table" id="payments-table">
+              <thead>
+                <tr>
+                  <th scope="col">Client</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Submitted</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="payments-body">
+                <tr><td colspan="5" class="table-empty">Loading…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admin-panel hidden" id="panel-users">
+          <h1 class="admin-panel-title">Registered Users</h1>
+          <div class="admin-table-wrap">
+            <table class="admin-table" id="users-table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Verified</th>
+                  <th scope="col">Joined</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="users-body">
+                <tr><td colspan="6" class="table-empty">Loading…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admin-panel hidden" id="panel-escalations">
+          <h1 class="admin-panel-title">Chat Escalations</h1>
+          <p class="admin-panel-desc">These are conversations where the chatbot could not answer a client's question or the client enquired about payment. A human agent should follow up on each unresolved escalation.</p>
+          <div class="escalation-list" id="escalation-list" role="list" aria-label="Chat escalations">
+            <div class="loading-state">Loading escalations…</div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
