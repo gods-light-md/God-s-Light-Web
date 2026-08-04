@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — NexaGen Tech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+</head>
+<body>
+
+  <div class="auth-page" role="main">
+
+    <aside class="auth-brand-panel" aria-label="NexaGen brand">
+      <div class="auth-brand-top">
+        <a href="../index.html" class="nav-logo" aria-label="NexaGen Home">
+          <span class="logo-mark">N</span>
+          <span class="logo-text">NexaGen</span>
+        </a>
+        <blockquote class="auth-brand-quote">
+          "Every project has a <strong>named engineer.</strong> Every invoice can be traced to work <strong>actually done.</strong>"
+        </blockquote>
+        <ul class="auth-service-list" role="list">
+          <li class="auth-service-item"><span class="auth-service-dot" aria-hidden="true"></span>Electrical Installation</li>
+          <li class="auth-service-item"><span class="auth-service-dot" aria-hidden="true"></span>CCTV Installation</li>
+          <li class="auth-service-item"><span class="auth-service-dot" aria-hidden="true"></span>Microsoft Solutions</li>
+          <li class="auth-service-item"><span class="auth-service-dot" aria-hidden="true"></span>Database Setup</li>
+          <li class="auth-service-item"><span class="auth-service-dot" aria-hidden="true"></span>Data Scientist Services</li>
+        </ul>
+      </div>
+      <span class="auth-brand-footer">Role-based access control &bull; OWASP compliant &bull; Encrypted sessions</span>
+    </aside>
+
+    <section class="auth-form-panel" aria-labelledby="register-heading">
+      <div class="auth-form-wrap">
+        <div class="auth-header">
+          <h1 class="auth-title" id="register-heading">Create your account.</h1>
+          <p class="auth-subtitle">Already have one? <a href="login.html">Sign in</a></p>
+        </div>
+
+        <div class="auth-alert auth-alert--error" id="register-error" role="alert" aria-live="assertive" hidden>
+          <span id="register-error-msg"></span>
+        </div>
+
+        <form class="auth-form" id="register-form" novalidate aria-label="Create account form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reg-firstname" class="form-label">First Name</label>
+              <input type="text" id="reg-firstname" name="firstName" class="form-input" placeholder="Ada" required autocomplete="given-name" />
+              <span class="form-error" id="reg-firstname-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="reg-lastname" class="form-label">Last Name</label>
+              <input type="text" id="reg-lastname" name="lastName" class="form-input" placeholder="Lovelace" required autocomplete="family-name" />
+              <span class="form-error" id="reg-lastname-error" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-email" class="form-label">Email Address</label>
+            <input type="email" id="reg-email" name="email" class="form-input" placeholder="ada@company.com" required autocomplete="email" />
+            <span class="form-error" id="reg-email-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-phone" class="form-label">Phone Number</label>
+            <input type="tel" id="reg-phone" name="phone" class="form-input" placeholder="+234 800 000 0000" required autocomplete="tel" />
+            <span class="form-error" id="reg-phone-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-company" class="form-label">Company / Organisation <span style="color:var(--color-text-muted);font-weight:400;">(optional)</span></label>
+            <input type="text" id="reg-company" name="company" class="form-input" placeholder="Acme Corp" autocomplete="organization" />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-service" class="form-label">Primary Service of Interest</label>
+            <select id="reg-service" name="serviceInterest" class="form-select" required>
+              <option value="">Select a service</option>
+              <option value="electrical">Electrical Installation</option>
+              <option value="cctv">CCTV Installation</option>
+              <option value="microsoft">Microsoft Solutions</option>
+              <option value="database">Database Setup</option>
+              <option value="datascience">Data Scientist Services</option>
+            </select>
+            <span class="form-error" id="reg-service-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-password" class="form-label">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="reg-password" name="password" class="form-input" placeholder="Create a strong password" required autocomplete="new-password" />
+              <button type="button" class="password-toggle" id="toggle-reg-pw" aria-label="Show password" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </button>
+            </div>
+            <div class="password-strength" id="strength-bars" aria-hidden="true">
+              <div class="strength-bar" id="bar-1"></div>
+              <div class="strength-bar" id="bar-2"></div>
+              <div class="strength-bar" id="bar-3"></div>
+              <div class="strength-bar" id="bar-4"></div>
+            </div>
+            <span class="form-hint" id="strength-label" aria-live="polite"></span>
+            <span class="form-error" id="reg-password-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-confirm" class="form-label">Confirm Password</label>
+            <input type="password" id="reg-confirm" name="confirmPassword" class="form-input" placeholder="Repeat your password" required autocomplete="new-password" />
+            <span class="form-error" id="reg-confirm-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <label class="checkbox-group">
+            <input type="checkbox" id="reg-terms" name="terms" required />
+            <span class="checkbox-label">I agree to NexaGen's <a href="#" style="color:var(--color-accent);">Terms of Service</a> and <a href="#" style="color:var(--color-accent);">Privacy Policy</a></span>
+          </label>
+          <span class="form-error" id="reg-terms-error" role="alert" aria-live="polite"></span>
+
+          <button type="submit" class="btn btn-primary btn-full" id="register-submit">
+            <span class="btn-text">Create Account</span>
+            <span class="btn-spinner" aria-hidden="true" hidden></span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="../js/auth.js" type="module"></script>
+
+</body>
+</html>
